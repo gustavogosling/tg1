@@ -1,5 +1,5 @@
 contornos
 figs
 Grades/*
-!Grades/earth.grd
+! Grades/earth.grd
 *.grd
