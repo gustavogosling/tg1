@@ -1,5 +1,3 @@
-contornos
 figs
 *.grd
-Grades/*
-!Grades/earth.grd
+Grades
