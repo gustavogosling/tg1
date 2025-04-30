@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# primeiro input eh a resolucao (10 eh 1 grau e 05 eh 0.5 graus)
-# segundo input eh a grade de onde serao realizados os cortes, i.e. earth.grd
-# terceiro input eh o nome do arquivo LINHAS_DE_COMANDO (falar com bianchi se nao souber)
-# quarto input eh o nome da grade final
+# primeiro input eh a resolucao da grade
+# segundo input eh o diametro do filtro em derivadas_paralel.sh
+# terceiro input eh a porcentagem dos valores maximo de cada grade em derivadas_paralel.sh
+# quarto input eh o valor minimo aceitado em derivadas_paralel.sh
 
-bash filewriter_brasil_der_paralel.sh $1 $2 $3 colacola.sh
-cat $3 | bash runp.sh 8
+res=$1
+d=$2
+porc=$3
+min=$4
+nome=`awk -v res="$res" -v d="$d" -v porc="$porc" -v min="$min" 'BEGIN {printf "grade_%dx%d_%d_%d_%d", res, res, d, porc, min}' | tr ',' '.'`
+
+bash filewriter_brasil_der_paralel.sh $res $d $porc $min ../grades/earth.grd "$nome".sh colacola.sh
+cat "$nome".sh | bash runp.sh 8
 bash colacola.sh
-mv figrd.grd DONTEXCLUDE
-rm *.grd gmt.history $3 colacola.sh
-mv DONTEXCLUDE "$4".grd
+mv figrd.grd ../grades/"$nome".grd
+rm *.grd gmt.history "$nome".sh colacola.sh
