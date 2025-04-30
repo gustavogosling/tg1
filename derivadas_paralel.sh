@@ -15,7 +15,7 @@ mv "$1"_ddyf.grd "$1"_ddy.grd
 # Soma
 gmt grdmath "$1"_ddx.grd SQR "$1"_ddy.grd SQR ADD SQRT = "$1"_der.grd
 
-# modulo de escolha dos pontos de maximo
+# Módulo de escolha dos pontos de maximo
 max=`gmt grdinfo "$1"_der.grd | awk 'FNR==8 {print $5}'`
 lim=`bc <<< "scale=1; $max * 0.5"`
 gmt grdmath "$1"_der.grd 10 GE "$1"_der.grd $lim GE MUL = "$2".grd
