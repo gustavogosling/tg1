@@ -3,8 +3,8 @@
 # primeiro input eh a grade da esquerda
 # segundo input eh a grade da direita
 # terceiro input eh o nome do output
-grade1="$1"
-grade2="$2"
+grade1=$1
+grade2=$2
 
 # Recorta um pedaço da grade
 gmt grdcut -R-60/-52/-25/-14 $grade1 -Gcut1.grd 
