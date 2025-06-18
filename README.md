@@ -1,9 +1,9 @@
-To do list:
+# Análise regional de compartimentos de relevo a partir da implementação de Gradiente Horizontal Total: Uma proposta de algoritmo 
 
-encontrar referências de mapas de feições tectônicas
+Os scripts estão na pasta processamento, com os scripts de "rotina" para ambos os apendices gerando a maior parte das grades processadas de acordo com o algoritmo proposto.
 
-# TEMA - Utilização de soma quadrática de derivadas horizontais da topografia para delimitação de grandes feições topográficas
+! [Algoritmo proposto] (./figuras/figura01.png)
 
-A ideia é utilizar uma grade de topografia e batimetria (predita) do mundo, recortar o brasil e fazer diversas análises locais
-das derivadas e agrupar os resultados posteriormente em uma única grade, possívelmente um mapa de feições topográficas ou de 
-feições tectônicas
+O algoritmofoi desenvolvido em shell utilizando awk, gmt e um algumas linhas usei bc (problemas com decimais...).
+
+Ainda atualizarei melhor o repositório, mas com esta versão é possível gerar boa parte das Figuras do trabalho e a maior parte das grades processadas apresentadas (exceção de algumas grades que criadas e apagadas na geração de figuras).
