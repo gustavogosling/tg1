@@ -2,7 +2,7 @@
 
 Os scripts estão na pasta processamento, com os scripts de "rotina" para ambos os apendices gerando a maior parte das grades processadas de acordo com o algoritmo proposto.
 
-! [Algoritmo proposto] (./figuras/figura01.png)
+<img src="https://github.com/gustavogosling/tg1/blob/main/figuras/figura01.png" alt="Algoritmo">
 
 O algoritmofoi desenvolvido em shell utilizando awk, gmt e um algumas linhas usei bc (problemas com decimais...).
 
