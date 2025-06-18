@@ -18,9 +18,9 @@ contcop=$cont
 
 while [ $cont -le $norte ]
 do
-	s=`bc <<< "scale=2; ($cont - $1)" | awk '{printf "%.2f", $1 / 10}' | tr ',' '.'`
-	n=`bc <<< "scale=2; $cont" | awk '{printf "%.2f", $1 / 10}' | tr ',' '.'`
-	nc=`bc <<< "scale=2; ($cont - $1 / 2) * 10" | awk '{printf "%.2f", $1 / 100}' | tr ',' '.'`
+	s=`bc <<< "scale=2; ($cont - $1)" | awk '{printf "%.2f", $1 / 10}'`
+	n=`bc <<< "scale=2; $cont" | awk '{printf "%.2f", $1 / 10}'`
+	nc=`bc <<< "scale=2; ($cont - $1 / 2) * 10" | awk '{printf "%.2f", $1 / 100}'`
 	echo "bash linhas_paralel.sh $1 $2 $3 $4 $s $n $nc $5 der_$cont.grd" >> $6
 	if [ $cont -eq $contcop ]
 	then

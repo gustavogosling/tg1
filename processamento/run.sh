@@ -11,8 +11,8 @@ porc=$3
 min=$4
 nome=`awk -v res="$res" -v d="$d" -v porc="$porc" -v min="$min" 'BEGIN {printf "grade_%dx%d_%d_%d_%d", res, res, d, porc, min}' | tr ',' '.'`
 
-bash filewriter_brasil_der_paralel.sh $res $d $porc $min ../grades/earth.grd "$nome".sh colacola.sh
-cat "$nome".sh | bash runp.sh 8
+bash processamento/filewriter_brasil_der_paralel.sh $res $d $porc $min ../grades/earth.grd "$nome".sh colacola.sh
+cat "$nome".sh | bash processamento/runp.sh 8
 bash colacola.sh
-mv figrd.grd ../grades/"$nome".grd
-rm *.grd gmt.history "$nome".sh colacola.sh
+mv figrd.grd grades/"$nome".grd
+rm *.grd gmt.history "$nome".sh colacola.sh LOG*
