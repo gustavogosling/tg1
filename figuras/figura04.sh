@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name=figura4
+name=figura04
 
 gmt grdcut grades/earth.grd -Fcontornos/brasil_1x1.xy+c -Gbrasil_1x1.grd 
 
@@ -30,7 +30,6 @@ gmt psscale -Dx2/-0.6+w6/0.2+h -Ba50f5:'GHT (m/km)': -J -R -Cpal_d.cpt -O -K --F
 
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps brasil.grd brasil_1x1.grd grad.grd ddx.grd ddy.grd pal_d.cpt gmt.history

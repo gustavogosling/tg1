@@ -13,7 +13,6 @@ gmt pscoast -R -J -O -K -W0.5p -Dl -N1 -A10000+l >> "$name".ps
 cat $contorno | gmt psxy -R -J -O -K -W2p,red >> "$name".ps
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps BR_grade.grd brasil_der.cpt gmt.history

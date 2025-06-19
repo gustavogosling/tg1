@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name=figura2
+name=figura02
 
 grade=grades/grade_10x10_10_40_0.grd
 
@@ -13,7 +13,6 @@ gmt pscoast -R -J -O -K -W0.5p -Di -N1 -A10000+l >> "$name".ps
 
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps brasil_der_1x1.cpt gmt.history

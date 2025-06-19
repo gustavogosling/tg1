@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name=figura9
+name=figura09
 
 grade=grades/grade_5x5_25_40_8.grd
 contorno=contornos/brasil_05x05.xy
@@ -13,7 +13,6 @@ gmt pscoast -R -J -O -K -W0.5p -Dl -N1 -A10000+l >> "$name".ps
 cat $contorno | gmt psxy -R -J -O -K -W1p,green >> "$name".ps
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps BR_grade.grd brasil_der.cpt gmt.history

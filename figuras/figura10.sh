@@ -48,7 +48,6 @@ echo "-37 -33 b)" | gmt pstext -R -J -O -K -F+f12,Helvetica-Bold -Gwhite >> "$na
 
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps grad.grd brasil_05x05.grd pal.cpt gmt.history

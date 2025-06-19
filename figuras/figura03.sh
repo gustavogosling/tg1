@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name=figura3
+name=figura03
 
 # Recorta um pedaço da grade
 gmt grdcut grades/earth.grd -R-76/-32/-36/8 -Gbrasil.grd
@@ -54,7 +54,6 @@ echo "-37 -33 b)" | gmt pstext -R -J -O -K -F+f12,Helvetica-Bold -Gwhite >> "$na
 
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps brasil.grd brasil_1x1.grd pal.cpt gmt.history

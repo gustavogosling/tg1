@@ -135,7 +135,6 @@ echo "-41.8 -7.9 p)" | gmt pstext -R -J -O -K -F+f12,Helvetica-Bold -Gwhite >> "
 
 gmt psxy -R -J -O -T >> "$name".ps
 
-[ -f "$name".ps ] && gv "$name".ps
 gmt psconvert -P -A -TG "$name".ps
 
 rm -f "$name".ps cut*.grd brasil_der_1x1.cpt gmt.history
