@@ -1,8 +1,6 @@
 #~ all: tex/tg1.pdf
 
-#~ figura5.png figura6.png figura7.png figura8.png figura10.png
-
-all: figura2.png figura3.png figura4.png figura9.png apendiceB.png
+all: figura02.png figura03.png figura04.png figura05.png figura06.png figura07.png figura08.png figura09.png figura10.png apendiceB.png
 
 clean:
 	rm -rfv grades/*
@@ -12,29 +10,29 @@ grades/earth.grd:
 	gmt grdcut -Rg @earth_relief_02m_p -Gearth.grd
 	mv earth.grd grades/
 
-figura2.png: grades/earth.grd grades/grade_10x10_10_40_4.grd
-	bash figuras/figura2.sh
+figura02.png: grades/earth.grd grades/grade_10x10_10_40_4.grd
+	bash figuras/figura02.sh
 
-figura3.png: grades/earth.grd
-	bash figuras/figura3.sh
+figura03.png: grades/earth.grd
+	bash figuras/figura03.sh
 
-figura4.png: grades/earth.grd
-	bash figuras/figura4.sh
+figura04.png: grades/earth.grd
+	bash figuras/figura04.sh
 	
-figura5.png: apendiceA1.png apendiceA2.png
-	bash figuras/figura5.sh
+figura05.png: apendiceA1.png apendiceA2.png
+	bash figuras/figura05.sh
 	
-figura6.png: apendiceA1.png apendiceA2.png
-	bash figuras/figura6.sh
+figura06.png: apendiceA1.png apendiceA2.png
+	bash figuras/figura06.sh
 	
-figura7.png: apendiceA1.png apendiceA2.png
-	bash figuras/figura7.sh
+figura07.png: apendiceA1.png apendiceA2.png
+	bash figuras/figura07.sh
 	
-figura8.png: apendiceA1.png apendiceA2.png
-	bash figuras/figura8.sh
+figura08.png: apendiceA1.png apendiceA2.png
+	bash figuras/figura08.sh
 	
-figura9.png: apendiceA2.png
-	bash figuras/figura9.sh
+figura09.png: apendiceA2.png
+	bash figuras/figura09.sh
 	
 figura10.png: apendiceA2.png
 	bash figuras/figura10.sh
