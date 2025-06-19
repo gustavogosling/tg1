@@ -4,6 +4,8 @@ Os scripts estão na pasta processamento, com os scripts de "rotina" para ambos 
 
 <img src="https://github.com/gustavogosling/tg1/blob/main/figuras/figura01.png" alt="Algoritmo">
 
-O algoritmofoi desenvolvido em shell utilizando awk, gmt e um algumas linhas usei bc (problemas com decimais...).
+O algoritmo foi desenvolvido em **shell** utilizando AWK, GMT e um algumas linhas usei bc (problemas com casas decimais...).
 
-Ainda atualizarei melhor o repositório, mas com esta versão é possível gerar boa parte das Figuras do trabalho e a maior parte das grades processadas apresentadas (exceção de algumas grades que criadas e apagadas na geração de figuras).
+Ainda atualizarei melhor o repositório, mas com esta versão é possível gerar boa parte das Figuras do trabalho e a maior parte das grades processadas apresentadas (exceção de algumas grades criadas e apagadas na geração de figuras).
+
+Basta baixar o repositório (ou clonar) e digitar **make all** no diretório tg1. As Figuras serão geradas no diretório geral.
