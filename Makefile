@@ -10,10 +10,10 @@ grades/earth.grd:
 	gmt grdcut -Rg @earth_relief_02m_p -Gearth.grd
 	mv earth.grd grades/
 
-figura02.png: grades/earth.grd grades/grade_10x10_10_40_4.grd
+figura02.png: grades/earth.grd
 	bash figuras/figura02.sh
 
-figura03.png: grades/earth.grd
+figura03.png: grades/earth.grd grades/grade_10x10_10_40_4.grd
 	bash figuras/figura03.sh
 
 figura04.png: grades/earth.grd
